@@ -17,7 +17,9 @@ gem 'active_model_serializers'
 gem 'angular-rails-templates'
 gem 'angularjs-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
+gem 'better_errors', '~>2.1.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
 
 #Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -38,15 +40,12 @@ gem 'rspec_junit_formatter', :github => 'circleci/rspec_junit_formatter', group:
 gem 'factory_girl_rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   #add in the gem for rspec
   gem 'rspec-rails', '~> 3.0'
   gem 'did_you_mean'
   gem 'capybara'
-  gem 'better_errors'
   #add validation-association matchers
   gem 'shoulda-matchers', require: false
 end
