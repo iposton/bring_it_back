@@ -21,6 +21,157 @@
  * Globals
  */
 
+ $pushed: 250px;
+ $header-height: 60px;
+
+ .no-spacing
+{
+  padding: 0;
+  margin: 0;
+}
+
+.max-height
+{
+  min-height: 100%;
+}
+
+.max-width
+{
+  width: 100%;
+}
+
+ .full-page
+{
+  @extend .no-spacing;
+  @extend .max-width;
+  @extend .max-height;
+}
+
+.top-layer
+{
+  z-index: 10;
+}
+
+ /*
+ * Animations
+ */
+
+.push-menu
+{
+  @extend .max-height;
+  @extend .top-layer;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #424242;
+  transition: width 0.5s ease;
+  button
+  {
+    width: 100%;
+    margin: 10px 0;
+    color: white;
+    background-color: #6E6E6E;
+    border: 0;
+    padding: 10px;
+    a
+    {
+      color: #fff;
+    }   
+  }
+}
+
+.pushed-menu
+{
+  width: $pushed;
+}
+
+.body-pushed
+{
+  left: -$pushed;
+
+}
+
+.glyphicon-menu-hamburger
+  {
+    font-size: 2.2em;
+    position: absolute;
+    right: 24px;
+    top: 16px;    
+    cursor: pointer;
+  }
+
+  // ### Default SASS Mixins ###
+
+// ### Elements ###
+
+*
+{
+  border-radius: 0;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  @extend .full-page;
+  height: 100%;
+  background-color: #2980b9;
+  
+
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  position: relative;
+  left: 0px;
+  transition: left .5s ease;
+  
+}
+
+h1 {
+
+  font-family:'Monoton', cursive;
+  font-size: 50px;
+  letter-spacing: .2em;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+ display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+           
+          
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  
+  
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+
+
+
+
 /* Links */
 a,
 a:focus,
@@ -52,59 +203,21 @@ font-size: 26px;
 }
 
 
-/*
- * Base structure
- */
 
-html,
-body {
-  height: 100%;
-  background-color: #2980b9;
 
-}
-body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
-
-h1 {
-
-  font-family:'Monoton', cursive;
-  font-size: 50px;
-  letter-spacing: .2em;
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
 
 
 /*
  * Header
  */
 .masthead-brand {
+
+  
   margin-top: 10px;
   margin-bottom: 10px;
+  
+  
+  
 }
 
 .masthead-nav > li {
@@ -135,12 +248,19 @@ h1 {
   border-bottom-color: #fff;
 }
 
+a
+{
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
+    //transition: left .5s ease;
   }
   .masthead-nav {
     float: right;
+    //transition: left .5s ease;
   }
 }
 
@@ -197,6 +317,11 @@ h1 {
   color: rgba(255,255,255,.5);
 }
 
+  .glyphicon-heart
+  {
+    color: #FA5858;
+  }
+
 
 /*
  * Affix and center
@@ -205,12 +330,14 @@ h1 {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    position: absolute;
     top: 0;
+    //transition: left .5s ease;
   }
   .mastfoot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    //transition: left .5s ease;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -221,6 +348,7 @@ h1 {
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    //transition: left .5s ease;
   }
 }
 
@@ -229,5 +357,6 @@ h1 {
   .mastfoot,
   .cover-container {
     width: 700px;
+    //transition: left .5s ease;
   }
 }
