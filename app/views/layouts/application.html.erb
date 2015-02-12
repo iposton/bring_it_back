@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
+
 <title ng-bind="title"></title>
+
+
+
+
   <!-- Google Fonts -->
   <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext', :media => "all" %>
   <%= stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Muli:300,400', :media => "all" %>
@@ -16,6 +21,8 @@
 <body ng-class="{true: 'body-pushed'}[main.pushmenu]">
 <%= render 'shared/header' %>
 <%= render 'shared/sidenav' %>
+
+
 
 <div id="view-container" class="container-fluid" ng-click="main.pushmenu = false">
 	
