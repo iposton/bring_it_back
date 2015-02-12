@@ -5,6 +5,7 @@
 			'templates',
 			'ngResource',
 			'ngRoute'
+			
 		]);
 
 })();
