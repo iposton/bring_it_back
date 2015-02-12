@@ -1,1 +1,26 @@
 
+<%= provide(:title, "Sign up") %>
+
+
+<div class="container signup">
+	<div class="col-md-offset-4 col-md-4">
+		<h2>Sign up today</h2>
+
+		 <%= form_for @user do |f| %>	      
+
+	      <%= f.text_field :name, class: "form-control", autofocus: true, placeholder: "Name" %>
+	      <br />	
+	      <%= f.email_field :email, class:"form-control", placeholder:"Email" %>	 
+	      <br />     
+	      <%= f.password_field :password, class: "form-control", placeholder:"Password" %>
+	      <br />
+	      	      
+	      <%= f.submit "Create my account", class: "form-control btn-success" %>
+	    <% end %>
+	    <br />
+
+	    <span>If you have an account, <a data-toggle="modal" data-target="#login">login here</a>.</span>
+
+
+	</div>
+</div>

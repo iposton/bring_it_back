@@ -22,6 +22,10 @@
 <%= render 'shared/header' %>
 <%= render 'shared/sidenav' %>
 
+<% if !logged_in? %>
+  <%= render 'shared/modal' %>
+<% end %>
+
 
 
 <div id="view-container" class="container-fluid" ng-click="main.pushmenu = false">
