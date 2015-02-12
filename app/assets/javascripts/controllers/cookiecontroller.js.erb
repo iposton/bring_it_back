@@ -1,0 +1,41 @@
+(function(){
+
+	angular
+		.module('app')
+		.controller('cookieController', cookieController);
+
+		cookieController.$inject = ['ipCookie'];
+
+	function cookieController(ipCookie){
+
+		var self = this;
+
+		// Set ipCookie to expire after 1 day
+		var setCookie = function(id){
+			ipCookie('id', id, { expires: 30 });
+		}
+
+		var removeCookie = function(){
+			ipCookie.remove('id');
+		}
+
+		
+		self.init = function(id){
+
+			// Set cookie if undefined
+			if(typeof ipCookie() == 'undefined'){					
+				setCookie(id);						
+			}															
+			
+		}	
+
+		self.remove = function(){			
+			// Remove cookie
+			removeCookie();			
+		}
+		
+
+	}
+
+
+})();

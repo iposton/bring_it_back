@@ -2,7 +2,11 @@
 <html ng-app="app">
 <head>
 
+<% if logged_in? %>
 <title ng-bind="title"></title>
+<% else %>
+<title><%= yield(:title) %></title>
+<% end %>
 
 
 

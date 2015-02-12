@@ -18,15 +18,5 @@ module SessionsHelper
     @current_user = nil
   end
 
-    def self.serialize_from_session(key, salt)
-    (key = key.first) if key.kind_of? Array
-    (key = BSON::ObjectId.from_string(key['$oid'])) if key.kind_of? Hash
-
-    record = to_adapter.get(key)
-    record if record && record.authenticatable_salt == salt
-  end
-
-  def self.serialize_into_session(record)
-    [record.id.to_s, record.authenticatable_salt]
-  end
+  
 end
