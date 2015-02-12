@@ -1,6 +1,7 @@
 class User
   include Mongoid::Document
   include Mongoid::Attributes::Dynamic
+  include ActiveModel::SecurePassword
   field :name, type: String
   field :email, type: String
   # field :password, type: String
@@ -21,7 +22,7 @@ class User
   validates :password, length: {minimum: 6}
 
   # Enforces validation on the virtual password & password_confirmation attributes
-  # has_secure_password
+  has_secure_password
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

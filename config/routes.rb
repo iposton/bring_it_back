@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'users#new'
 
   # This is our single page (app)  
-  # get '/home' => 'home#index' 
+   get '/home' => 'home#index' 
 
    resource :users, only: [:new, :create]
 
@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
+  namespace :api, defaults: {format: :json} do
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
