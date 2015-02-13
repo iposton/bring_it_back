@@ -19,6 +19,15 @@
 				controllerAs: 'main'
 
 			})
+
+			.when('/movies', {
+
+				title: "Movies",
+				templateUrl: 'movies.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+
+			})
 				.otherwise({
 
 				redirectTo: '/'
