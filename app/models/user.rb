@@ -7,7 +7,7 @@ class User
   # field :password, type: String
   field :password_digest, type: String
   field :remember_digest, type: String
-  # has_many :movies
+   has_many :movies
   #attr_accessor :password
   attr_accessor :remember_token
 
