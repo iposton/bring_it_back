@@ -12,7 +12,7 @@ Rails.application.routes.draw do
    get '/home' => 'home#index' 
 
    resources :users, only: [:new, :create]
-   resources :favorites
+   
 
   # Resource for sessions    
   get 'login' => 'sessions#new'
@@ -21,7 +21,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
      resources :movies
-     # resources :users
+     resources :users
+     resources :favorites
   end
 
   # You can have the root of your site routed with "root"

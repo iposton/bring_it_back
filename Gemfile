@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
+# Gemfile
+ruby '2.1.3'
+# gems gems gems gems
+# gems gems gems gems
 
 gem 'mongoid', '~>4.0.0'
+gem 'rottentomatoes', '~> 1.1.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

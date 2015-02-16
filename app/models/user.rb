@@ -7,7 +7,7 @@ class User
   field :password_digest, type: String
   field :remember_digest, type: String
   has_many :movies
-  embeds_many :favorites, class_name: "Favorite", inverse_of: :movie_favorite
+  has_many :favorites
 
   attr_accessor :remember_token
 

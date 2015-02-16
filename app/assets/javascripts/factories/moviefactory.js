@@ -11,19 +11,19 @@
         var Movies = function(){
             var self = this;
 
-            // Use ngResource for Posts
+            // Use ngResource for Movies
             var MovieResource = new Resources('movies');
 
-            // Get all posts
+            // Get all Movies
             self.movies = MovieResource.query();
 
-            // Create a post object
+            // Create a movie object
             self.movie = new MovieResource();
 
             self.create = function(movie){
 
                 MovieResource.save(movie, function(data, headers, status){    
-                    // take post from array                             
+                    // take movie from array                             
                     self.movies.unshift(data);                           
                     // Clear the modal form
                     movie.link = '';
@@ -39,7 +39,7 @@
             };
 
 
-            // Delete a post
+            // Delete a movie
             self.destroy = function(movie, index){
 
                 var movieObj = {id: movie};
