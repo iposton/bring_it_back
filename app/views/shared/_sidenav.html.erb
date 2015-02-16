@@ -6,7 +6,7 @@
 			<a href="/home/#/"><button>Home</button></a>	
 			<button><%= link_to "Edit", "/home/#/edit/#{session[:user_id]}" %></button>
 			<button><a href="/home/#/movies/">Movies Page</a></button>
-			<button><a href="/home/#/help/">Help Page</a></button>
+			<button><a href="/home/#/user-profile/">User Profile Page</a></button>
 			<button ng-click="cookie.remove()"><%= link_to "Logout", logout_path, method: "delete" %> </button>
 			<% else %>
 			<button data-toggle="modal" data-target="#login">Log in</button>

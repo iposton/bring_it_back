@@ -3,13 +3,32 @@
           
             <h1 class="cover-heading">Bring it Back</h1>
             <div class="form-signin">
+            <form ng-submit="main.Movie.create(main.Movie.movie)">
             <div class="input-group form-signin">
+            <span class="input-group-addon">Link</span>
+           <input id="movie" type="text" ng-model="main.Movie.movie.link" class="form-control" autofocus="true" placeholder="Enter link.."  />
+            </div>
+            <div class="input-group form-signin">
+            
              <span class="input-group-addon">Movie</span>
-           <input id="movie" type="text" class="form-control" placeholder="Eg. The Theory of Everything..." autofocus>
+           <input id="movie" type="text" ng-model="main.Movie.movie.title" class="form-control" placeholder="Eg. The Theory of Everything..." autofocus>
            </div>
+            <div ng-show="main.Movie.movieError === true" class="text-warning row text-center">Error!</div>
             <p class="lead">
-              <a href="https://www.youtube.com/watch?v=Salz7uGp72c" class="btn btn-lg btn-warning">Remind Me To See This Movie!</a>
+              
+               <input type="submit" id="submit" class="btn btn-lg btn-warning" value="Remind Me To See This Movie!" />
             </p>
+            </form>
+
 
           </div>
+           <!-- <div ng-repeat="movie in main.Movie.movies">
+  
+              <h3>{{movie.title}}</h3>
+    
+
+
+         </div> -->
     </div>
+   
+     

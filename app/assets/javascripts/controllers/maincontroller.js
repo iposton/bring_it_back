@@ -6,17 +6,17 @@
 		.module('app')
 		.controller('MainController', MainController);
 
-	MainController.$inject = ['ipCookie'];
+	MainController.$inject = ['MoviesFactory', 'ipCookie'];
 
-	function MainController(ipCookie){
+	function MainController(MoviesFactory, ipCookie){
 
 		var self = this;
 
 		self.id = ipCookie('id');		
 								
-		//Create PostFactory as an object						
-		// self.Post = new PostsFactory();
-		// self.id = ipCookie('id');
+		// Create PostFactory as an object						
+		 self.Movie = new MoviesFactory();
+		 self.id = ipCookie('id');
 
 	}
 

@@ -14,7 +14,7 @@ module API
 
     def create
       # post = current_user.posts.build(post_params)  
-      post = Movie.new(movie_params)
+      movie = Movie.new(movie_params)
       user = User.find(params[:user_id])
       movie.user = user   
 
@@ -43,7 +43,7 @@ module API
     private
     
       def movie_params
-        params.require(:movie).permit(:title, :release_date, :actor1, :actor2, :actor3, :description, :reminders, :user_id)
+        params.require(:movie).permit(:title, :link, :release_date, :actor1, :actor2, :actor3, :description, :reminders, :user_id)
       end
       
 
