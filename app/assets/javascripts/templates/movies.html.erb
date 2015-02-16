@@ -6,10 +6,26 @@
 		</div>
 	
 		<a href="{{movie.link}}">{{movie.title}}</a>{{user.name}}
-		
+
+	
 
 
 </div>
+
+
+	<form ng-submit="main.Favorite.create(main.Favorite.favorite)">
+            
+            <div class="input-group form-signin">
+            
+             <span class="input-group-addon">Favorite</span>
+           <input id="movie" type="text" ng-model="main.Favorite.favorite.title" class="form-control" placeholder="Eg. The Theory of Everything..." autofocus>
+           </div>
+            <div ng-show="main.Favorite.favoriteError === true" class="text-warning row text-center">Error!</div>
+            <p class="lead">
+              
+               <input type="submit" id="submit" class="btn btn-lg btn-warning" value="Favorite This Movie!" />
+            </p>
+    </form>
 
 
 

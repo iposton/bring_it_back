@@ -6,9 +6,9 @@
 		.module('app')
 		.controller('MainController', MainController);
 
-	MainController.$inject = ['MoviesFactory', 'ipCookie'];
+	MainController.$inject = ['MoviesFactory', 'FavoritesFactory', 'ipCookie'];
 
-	function MainController(MoviesFactory, ipCookie){
+	function MainController(MoviesFactory, FavoritesFactory, ipCookie){
 
 		var self = this;
 
