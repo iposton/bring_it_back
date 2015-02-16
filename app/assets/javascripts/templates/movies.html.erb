@@ -1,1 +1,15 @@
 <h1>This is a list of New Movies!</h1>
+<div class="link-container" ng-repeat="movie in main.Movie.movies">
+
+        <div class="remove" ng-click="main.Movie.destroy(movie.id, $index)">
+			<span class="glyphicon glyphicon-remove"></span>
+		</div>
+	
+		<a href="{{movie.link}}">{{movie.title}}</a>{{user.name}}
+		
+
+
+</div>
+
+
+

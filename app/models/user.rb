@@ -4,11 +4,11 @@ class User
   include ActiveModel::SecurePassword
   field :name, type: String
   field :email, type: String
-  # field :password, type: String
   field :password_digest, type: String
   field :remember_digest, type: String
-   has_many :movies
-  #attr_accessor :password
+  has_many :movies
+  embeds_many :favorites, class_name: "Favorite", inverse_of: :movie_favorite
+
   attr_accessor :remember_token
 
    before_save :downcase_email

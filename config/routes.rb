@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   # This is our single page (app)  
    get '/home' => 'home#index' 
 
-   resource :users, only: [:new, :create]
+   resources :users, only: [:new, :create]
+   resources :favorites
 
   # Resource for sessions    
   get 'login' => 'sessions#new'
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   namespace :api, defaults: {format: :json} do
+     resources :movies
+     # resources :users
   end
 
   # You can have the root of your site routed with "root"

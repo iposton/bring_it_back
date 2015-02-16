@@ -19,11 +19,27 @@
 				controllerAs: 'main'
 
 			})
+				.when('/edit/:id', {
+
+				title: 'Edit user',
+				templateUrl: 'edit.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+
+			})
 
 			.when('/movies', {
 
 				title: "Movies",
 				templateUrl: 'movies.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+
+			})
+				.when('/user-profile', {
+
+				title: 'User Profile',
+				templateUrl: 'user_profile.html',
 				controller: 'MainController',
 				controllerAs: 'main'
 

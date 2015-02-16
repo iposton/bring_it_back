@@ -3,7 +3,11 @@ module API
 
     protect_from_forgery with: :null_session
 
-    respond_to :json
+    respond_to :html, :xml, :json
+
+     def index
+      respond_with User.all
+     end
 
     def create
       user = User.new(user_params)
