@@ -1,6 +1,6 @@
 module API
   class MoviesController < ApplicationController
-    protect_from_forgery with: :null_session
+    #protect_from_forgery with: :null_session
        
     respond_to :html, :xml, :json    
 
