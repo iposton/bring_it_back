@@ -1,7 +1,7 @@
-class Favorite
-	include Mongoid::Document
-	field :title, type: String
-	belongs_to :user
-	belongs_to :movie
+# class Favorite
+# 	include Mongoid::Document
+# 	field :title, type: String
+# 	belongs_to :user
+# 	belongs_to :movie
 
-end
+# end

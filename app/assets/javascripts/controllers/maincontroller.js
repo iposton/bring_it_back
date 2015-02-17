@@ -14,7 +14,7 @@
 
 		self.id = ipCookie('id');		
 								
-		// Create PostFactory as an object						
+		// Create MovieFactory as an object						
 		 self.Movie = new MoviesFactory();
 		 self.id = ipCookie('id');
 
