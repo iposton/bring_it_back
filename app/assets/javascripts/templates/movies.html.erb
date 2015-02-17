@@ -1,19 +1,58 @@
-<h1>This is a list of New Movies!</h1>
-<div class="link-container" ng-repeat="movie in main.Movie.movies">
+<h2>This is a list of New Movies!</h2>
+<hr>
+  <div class="container-fluid">
+    <div class='row'>
+      <div ng-repeat="movie in main.Movie.movies">
+        <div id="posts-box" class="sidebar-module col-sm-4">
+          <h4>{{movie.release_date}}</h4>
+            <ol>
+          		<li><!-- <div class="remove" ng-click="main.Movie.destroy(movie.id, $index)">
+                <span class="glyphicon glyphicon-remove"></span></div> -->
+              <p><a href="{{movie.link}}"><div id="movie-bubble" type="text" class="" data-container="body" data-toggle="popover" data-placement="left" data-content="{{movie.description}}">{{movie.title}}</div></a></p><div><input type="button" class="btn btn-default btn-small" value="Movie Details" data-toggle="modal" data-target="#myModal"></div></li>
+            </ol>
+        
+         <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">{{movie.title}}</h4>
+                </div>
+          <div class="modal-body">
+            <p>{{movie.title}} was released in {{movie.release_date}} starring {{movie.actor1}}, {{movie.actor2}}, and {{movie.actor3}}. </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-info">Add to my Favorites</button>
+          </div>
+              </div>
+          </div>
+        </div> <!-- modal end -->
+    </div>    
+      </div> <!-- ng repeat end -->
+    </div>
+  </div>
+ 
 
-        <div class="remove" ng-click="main.Movie.destroy(movie.id, $index)">
-			<span class="glyphicon glyphicon-remove"></span>
-		</div>
-	
-		<a href="{{movie.link}}">{{movie.title}}</a>{{user.name}}
 
-	
+<script type="text/javascript">
+  
+$(function () { $("[data-toggle='tooltip']").tooltip(); }); // enable bootstrap 3 tooltips
+   $('body').popover({ 
+    selector: '[data-toggle="popover"]', 
+    trigger: 'hover',
+    placement: 'right'
+    
+});
 
 
-</div>
+
+  
+</script>
 
 
-	<form ng-submit="main.Favorite.create(main.Favorite.favorite)">
+	<!-- <form ng-submit="main.Favorite.create(main.Favorite.favorite)">
             
             <div class="input-group form-signin">
             
@@ -25,7 +64,7 @@
               
                <input type="submit" id="submit" class="btn btn-lg btn-warning" value="Favorite This Movie!" />
             </p>
-    </form>
+    </form> -->
 
 
 
