@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
-# Gemfile
-ruby '2.1.3'
-# gems gems gems gems
-# gems gems gems gems
+
 
 gem 'mongoid', '~>4.0.0'
 gem 'rottentomatoes', '~> 1.1.0'
+gem 'httparty'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -60,4 +58,9 @@ group :production do
   gem 'thin'
   gem 'unicorn', '4.8.3'
 end
+
+# Gemfile
+ruby '2.1.3'
+# gems gems gems gems
+# gems gems gems gems
 

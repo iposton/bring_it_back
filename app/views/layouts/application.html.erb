@@ -2,47 +2,48 @@
 <html ng-app="app">
 <head>
 
-<% if logged_in? %>
-<title ng-bind="title"></title>
-<% else %>
-<title><%= yield(:title) %></title>
-<% end %>
-
-
-
+  <% if logged_in? %>
+  <title ng-bind="title"></title>
+  <% else %>
+  <title><%= yield(:title) %></title>
+  <% end %>
 
   <!-- Google Fonts -->
   <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext', :media => "all" %>
   <%= stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Muli:300,400', :media => "all" %>
   <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Monoton', :media => "all" %>
-  <!-- Google Fonts -->
+  <!-- Google Fonts end -->
   <%= stylesheet_link_tag    'application', media: 'all' %>
 
   <%= javascript_include_tag 'application'%>
   <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0" />
   <%= csrf_meta_tags %>
 </head>
+
 <body ng-class="{true: 'body-pushed'}[main.pushmenu]">
-<%= render 'shared/header' %>
-<%= render 'shared/sidenav' %>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <%= render 'shared/header' %>
+        <%= render 'shared/sidenav' %>
 
-<% if !logged_in? %>
-  <%= render 'shared/modal' %>
-<% end %>
+        <% if !logged_in? %>
+          <%= render 'shared/modal' %>
+        <% end %>
 
+        <div id="view-container" class="container-fluid" ng-click="main.pushmenu = false">
+        	<% flash.each do |message_type, message| %>
+        	  <div class="text-center alert alert-<%= message_type %> error-message">
+              <%= message %>
+            </div>
+        	<% end %>
+          <%= yield %>
+        </div>
 
-
-<div id="view-container" class="container-fluid" ng-click="main.pushmenu = false">
-	
-	<% flash.each do |message_type, message| %>
-	  <div class="text-center alert alert-<%= message_type %> error-message"><%= message %></div>
-	<% end %>
-
-<%= yield %>
-
-</div>
-
-<%= render 'shared/footer' %>
+        <%= render 'shared/footer' %>
+      </div> <!-- Cover Cotainer end -->
+    </div> <!-- Site Wrapper inner end -->
+  </div> <!-- Site Wrapper end -->
 </body>
 
 </html>

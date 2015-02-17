@@ -3,3 +3,5 @@ class Favorite
 	field :title, type: String
 	belongs_to: :user
 	belongs_to: :movie
+
+end

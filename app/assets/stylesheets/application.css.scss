@@ -117,7 +117,7 @@
 
 html,
 body {
-  @extend .full-page;
+  //@extend .full-page;
   height: 100%;
   background-color: #2980b9;
   
@@ -130,6 +130,7 @@ body {
   position: relative;
   left: 0px;
   transition: left .5s ease;
+  //height: 1000px;
   
 }
 
@@ -210,6 +211,8 @@ font-size: 26px;
 /*
  * Header
  */
+
+
 .masthead-brand {
 
   
@@ -229,17 +232,20 @@ font-size: 26px;
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+  font-size: 23px;
+  font-weight: 500;
+  color: white; /* IE8 proofing */
+  // color: rgba(255,255,255,.75);
+  //border-bottom: 2px solid transparent;
+  
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
+   text-decoration: none;
+
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
@@ -317,14 +323,143 @@ a
   font-weight: bold;
 }
 
+/*
+ * Popover
+ */
+
+div#movie-bubble a{
+
+  color: #34495e;
+  margin: 0;
+  padding: 0;
+}
+
+div#movie-bubble a:hover{
+
+  color: #34495e;
+  text-decoration: none;
+}
+
+.popover{
+
+  color: #34495e;
+  background-color: #bdc3c7;
+}
+/*
+ * Movie index style
+ */
+
+
+#posts-box  {
+  
+  padding: 0;
+  border: 3px solid #efefef;
+  border-top: 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  
+  margin-top: 30px;
+  
+}
+
+
+#posts-box ol {
+  
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  
+}
+
+
+#posts-box li {
+  
+  font-size: 16px;
+  padding: 12px;
+  border-bottom: 3px solid #efefef;
+  min-height: 60px;
+  line-height: 20px;
+  
+}
+
+
+#posts-box a {
+  
+  color: #555;
+  opacity: 2px;
+  
+}
+
+
+#posts-box li:last-child {
+  
+  
+  border-bottom: 0px;
+  
+}
+
+
+#posts-box h4 {
+  
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #efefef;
+  color: #555;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Lato';
+  padding: 12px;
+  letter-spacing: 2px;
+  margin: 0;
+  
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 10px 0px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+  
+  border: 5px dashed #F0AD4E;
+  
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
 
 /*
  * Footer
  */
 
+
+ .footer-text {
+  color: white;
+
+ }
+
+  .footer-text a:hover {
+  
+  text-decoration: none;
+  color: #2ecc71;
+  
+ }
+
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
 }
 
   .glyphicon-heart

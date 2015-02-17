@@ -1,5 +1,3 @@
-
-
 <!-- Modal -->
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -9,29 +7,17 @@
         <h4 class="modal-title" id="loginLabel">Login</h4>
       </div>
 
-      
-        <%= form_for(:session, url: login_path) do |f| %>
-        
+<%= form_for(:session, url: login_path) do |f| %>
         <div class="modal-body">
-
             <%= f.email_field :email, class: 'form-control', autofocus: 'true', placeholder: "Email" %>
-
             <br />
-
             <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-
-            
         </div>
 
         <div class="modal-footer">
-          
           <%= f.submit "Log in", class: 'btn btn-md btn-success' %>
-
         </div>
-
         <% end %>
-
-    
     </div>
   </div>
 </div>
@@ -39,12 +25,9 @@
 <script type="text/javascript">
   // When doc loads
     $(function(){
-
       // jQuery for modal
       $("#login").on('shown.bs.modal', function(){
         $(this).find("[autofocus]:first").focus();
       });
-
-
     });
 </script>
