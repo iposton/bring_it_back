@@ -15,4 +15,10 @@ class Movie
   #has_one :user, root: :movie_poster
   validates :link, presence: true, format: {with: /https?:\/\/[\S]+/}
   validates :title, presence: true, length: {maximum: 50}
+  
+  validates :actor1, presence: true, on: :create, length: { maximum: 55 }
+  validates :actor2, presence: true, on: :create, length: { maximum: 55 }
+  validates :actor3, presence: true, on: :create, length: { maximum: 55 }
+  validates :description, presence: true
+  validates :reminders, presence: true, on: :create, length: { maximum: 55 }
 end
