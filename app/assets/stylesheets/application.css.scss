@@ -130,7 +130,7 @@ body {
   position: relative;
   left: 0px;
   transition: left .5s ease;
-  //height: 1000px;
+  height: 1000px;
   
 }
 
@@ -190,10 +190,17 @@ a:hover {
   border: 1px solid #fff;
 }
 
+// .btn-warning {
+// letter-spacing: .1em;
+// font-size: 26px;
+//   width: 590px;
+//   height: 55px;
+// }
+
 .btn-warning {
 letter-spacing: .1em;
-font-size: 26px;
-  width: 590px;
+font-size: 16px;
+  width: 350px;
   height: 55px;
 }
 
@@ -278,6 +285,11 @@ a
 
   color: #2980b9;
 
+ }
+
+ #movie-modal {
+
+   color: #2980b9;
  }
 
 /*

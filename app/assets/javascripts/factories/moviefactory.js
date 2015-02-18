@@ -27,9 +27,15 @@
                     self.movies.unshift(data);                           
                     // Clear the modal form
                     movie.link = '';
-                    movie.title = '';        
+                    movie.title = '';
+                    movie.release_date = '';
+                    movie.actor1 = '';
+                    movie.actor2 = ''; 
+                    movie.actor3 = '';  
+                    movie.description = '';
+                    movie.reminders = '';         
                     // Close the modal
-                    $('#movie-link').modal('toggle');
+                    //$('#movie-link').modal('toggle');
                 }).$promise.catch(function(response) {
                     //this will be fired upon error
                     if(response.status !== 201){

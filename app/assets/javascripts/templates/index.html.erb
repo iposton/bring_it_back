@@ -1,34 +1,58 @@
-    <div class="inner cover">
-            <span class="glyphicon glyphicon-film"></span>
+<div class="inner cove">
+  <span class="glyphicon glyphicon-film"></span>
+        <h1 class="cover-heading">Bring it Back</h1>
+      <div class="col-md-8 col-md-offset-2">
+          <form ng-submit="main.Movie.create(main.Movie.movie)">
+
           
-            <h1 class="cover-heading">Bring it Back</h1>
-            <div class="form-signin">
-            <form ng-submit="main.Movie.create(main.Movie.movie)">
+
             <div class="input-group form-signin">
-            <span class="input-group-addon">Link</span>
-           <input id="movie" type="text" ng-model="main.Movie.movie.link" class="form-control" autofocus="true" placeholder="Enter link.."  />
-            </div>
-            <div class="input-group form-signin">
-            
-             <span class="input-group-addon">Movie</span>
-           <input id="movie" type="text" ng-model="main.Movie.movie.title" class="form-control" placeholder="Eg. The Theory of Everything..." autofocus>
+                 <span class="input-group-addon">Movie</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.title" class="form-control" placeholder="Eg. The Theory of Everything..." autofocus>
            </div>
+
+           <div class="input-group form-signin">
+                <span class="input-group-addon">Website</span>
+               <input id="movi" type="text" ng-model="main.Movie.movie.link" class="form-control" autofocus="true" placeholder="Enter link.."  />
+            </div>
+
+             <div class="input-group form-signin">
+                 <span class="input-group-addon">Release</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.release_date" class="form-control" placeholder="2014" autofocus>
+           </div>
+
+           <div class="input-group form-signin">
+                 <span class="input-group-addon">Starring</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.actor1" class="form-control" placeholder="Woody Harrelson" autofocus>
+           </div>
+
+             <div class="input-group form-signin">
+                 <span class="input-group-addon">Starring</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.actor2" class="form-control" placeholder="Gregory Peck" autofocus>
+           </div>
+
+             <div class="input-group form-signin">
+                 <span class="input-group-addon">Starring</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.actor3" class="form-control" placeholder="Julia Roberts" autofocus>
+           </div>
+
+          <div class="input-group form-signin">
+                 <span class="input-group-addon">Description</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.description" class="form-control" placeholder="This Movie Is About..." autofocus>
+           </div>
+
+           <div class="input-group form-signin">
+                 <span class="input-group-addon">Remind Me</span>
+                 <input id="movi" type="text" ng-model="main.Movie.movie.reminders" class="form-control" placeholder="In 3 weeks" autofocus>
+           </div>
+
             <div ng-show="main.Movie.movieError === true" class="text-warning row text-center">Error!</div>
-            <p class="lead">
+              <p class="lead">
               
-               <input type="submit" id="submit" class="btn btn-lg btn-warning" value="Remind Me To See This Movie!" />
+               <input type="submit" id="submit" class="btn btn-small btn-warning" value="Remind Me To See This Movie!" />
             </p>
-            </form>
+          </form>
+       </div>
+</div>
 
-
-          </div>
-           <!-- <div ng-repeat="movie in main.Movie.movies">
-  
-              <h3>{{movie.title}}</h3>
-    
-
-
-         </div> -->
-    </div>
-   
-     
+ 
