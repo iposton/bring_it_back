@@ -20,9 +20,10 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   namespace :api, defaults: {format: :json} do
+    
      resources :movies
      resources :users
-     resources :favorites
+     
   end
 
   # You can have the root of your site routed with "root"

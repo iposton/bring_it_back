@@ -12,7 +12,6 @@ Movie.create!([
 
 	         {title: "THE THEORY OF EVERYTHING",
 	         link: "http://www.rottentomatoes.com/m/the_theory_of_everything_2014/", 
-	         user_id: "",
 	         release_date: "2014", 
 	         actor1: "Eddie Redmayne", 
 	         actor2: "Felicity Jones", 
@@ -22,7 +21,6 @@ Movie.create!([
 
 	         {title: "NIGHTCRAWLER",
 	         link: "http://www.rottentomatoes.com/m/nightcrawler/",
-	         user_id: "",  
 	         release_date: "2014", 
 	         actor1: "Jake Gyllenhaal", 
 	         actor2: "Bill Paxton", 
@@ -33,7 +31,6 @@ Movie.create!([
 
 	         {title: "GONE GIRL", 
 	         link: "http://www.rottentomatoes.com/m/gone_girl/", 
-	         user_id: "",
 	         release_date: "2014", 
 	         actor1: "Ben Affleck", 
 	         actor2: "Rosamund Pike", 
@@ -43,7 +40,6 @@ Movie.create!([
 
 	         {title: "BOYHOOD",
 	         link: "http://www.rottentomatoes.com/m/boyhood/", 
-	         user_id: "", 
 	         release_date: "2014", 
 	         actor1: "Ethan Hawke", 
 	         actor2: "Ellar Coltrane", 
@@ -53,12 +49,11 @@ Movie.create!([
 
 	         {title: "FURY",
 	         link: "http://www.rottentomatoes.com/m/fury_2015/", 
-	         user_id: "",  
 	         release_date: "2014", 
 	         actor1: "Brad Pitt", 
 	         actor2: "Michael Peña", 
 	         actor3: "Shia LaBeouf", 
-	         description: "GONE GIRL - directed by David Fincher and based upon the global bestseller by Gillian Flynn - unearths the secrets at the heart of a modern marriage. On the occasion of his fifth wedding anniversary, Nick Dunne (Ben Affleck) reports that his beautiful wife, Amy (Rosamund Pike), has gone missing. Under pressure from the police and a growing media frenzy, Nick's portrait of a blissful union begins to crumble. Soon his lies, deceits and strange behavior have everyone asking the same dark question: Did Nick Dunne kill his wife?",
+	         description: "April, 1945. As the Allies make their final push in the European Theatre, a battle-hardened army sergeant named Wardaddy (Brad Pitt) commands a Sherman tank and her five-man crew on a deadly mission behind enemy lines. Outnumbered and outgunned, and with a rookie soldier thrust into their platoon, Wardaddy and his men face overwhelming odds in their heroic attempts to strike at the heart of Nazi Germany.",
 	         reminders: "in 2 weeks"}
 
 

@@ -9,7 +9,7 @@ class Movie
   field :actor3, type: String
   field :description, type: String
   field :reminders, type: String
-  field :user_id, type: Integer
+  #field :user_id, type: Integer
   #has_many :users
   belongs_to :user
   #has_one :user, root: :movie_poster

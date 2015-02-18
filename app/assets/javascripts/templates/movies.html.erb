@@ -75,7 +75,7 @@ $('#myModal').on('show.bs.modal', function (event) {
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text(title)
-  modal.find('.modal-body-starring').text(title + ' was released in ' + released + ' starring ' + starringOne + ' , ' + starringTwo + ' and ' + starringThree + '.' )
+  modal.find('.modal-body-starring').text(title + ' was released in ' + released + ' starring ' + starringOne + ', ' + starringTwo + ' and ' + starringThree + '.' )
   modal.find('.modal-body').text(description)
 })
 
@@ -84,19 +84,6 @@ $('#myModal').on('show.bs.modal', function (event) {
 </script>
 
 
-	<!-- <form ng-submit="main.Favorite.create(main.Favorite.favorite)">
-            
-            <div class="input-group form-signin">
-            
-             <span class="input-group-addon">Favorite</span>
-           <input id="movie" type="text" ng-model="main.Favorite.favorite.title" class="form-control" placeholder="Eg. The Theory of Everything..." autofocus>
-           </div>
-            <div ng-show="main.Favorite.favoriteError === true" class="text-warning row text-center">Error!</div>
-            <p class="lead">
-              
-               <input type="submit" id="submit" class="btn btn-lg btn-warning" value="Favorite This Movie!" />
-            </p>
-    </form> -->
-
+	
 
 
