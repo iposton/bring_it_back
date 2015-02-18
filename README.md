@@ -1,7 +1,7 @@
 <h1>Welcome To Bring It Back</h1>
 
 
-[![Circle CI](https://circleci.com/gh/iposton/back_it_up/tree/master.svg?style=svg)](https://circleci.com/gh/iposton/back_it_up/tree/master)
+[![Circle CI](https://circleci.com/gh/iposton/bring_it_back/tree/master.svg?style=svg)](https://circleci.com/gh/iposton/bring_it_back/tree/master)
 
 <h3>Never miss out with ‘Bring It Back’</h3>
 
@@ -15,10 +15,10 @@ Bring It Back runs on these technologies:
   <li>Rails 4.1.7</li>
   <li>Ruby 2.1.3</li>
   <li>Angular.JS</li>
+  <li>JQuery</li>
   <li>MongoDB</li>
   <li>Bootstrap 3.3.2</li>
   <li>Circle CI for continuous integration</li>
-  <li>Heroku for deployment</li>
   <li>Heroku for deployment</li>
   <li>RSpec, Factory Girl, and Capybara for testing</li>
 </ul>
@@ -38,3 +38,19 @@ Bring It Back uses the following Gems:
   <li>factory_girl_rails (testing)</li>
   <li>capybara (testing)</li>
 </ul>
+
+Run the following commands to use these gems
+
+<ul>
+  <li>To install to your machine, run</li>
+  <code>gem install name_of_gem_to_install</code>
+  <li>To include the gem into your app,</li>
+  <li>add each gem to your Gemfile, then</li>
+  <li>run bundle install</li>
+</ul>
+<h3>Databases in Bring It Back</h3>
+<p>To set up the database in Bring It Back, please be sure to install Mongo to your local machine, and to include the mongoid gem in the app.</p>
+In order to run the test suite, you'll need to rake the seed file with the following command:
+
+<code>rake db:seed</code>
+
