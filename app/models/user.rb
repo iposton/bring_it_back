@@ -8,7 +8,6 @@ class User
   field :remember_digest, type: String
   has_many :movies
   
-
   attr_accessor :remember_token
 
    before_save :downcase_email

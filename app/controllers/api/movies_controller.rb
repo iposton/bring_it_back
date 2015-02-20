@@ -12,12 +12,8 @@ module API
       respond_with Movie.find(params[:id])
     end
 
-    def create
-      # post = current_user.posts.build(post_params)  
+    def create 
       movie = Movie.new(movie_params)
-      #user = User.find(params[:user_id])
-      #movie.user = user   
-
       if movie.save
         render json: movie, status: 201
       else
@@ -45,7 +41,5 @@ module API
       def movie_params
         params.require(:movie).permit(:title, :link, :release_date, :actor1, :actor2, :actor3, :description, :reminders)
       end
-      
-
   end
 end
