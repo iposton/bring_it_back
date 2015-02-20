@@ -4,10 +4,7 @@ source 'https://rubygems.org'
 gem 'mongoid', '~>4.0.0'
 gem 'rottentomatoes', '~> 1.1.0'
 gem 'httparty'
-# gem 'angular-ui-bootstrap-rails', '~> 0.12.0'
-# gem 'jquery-ui-bootstrap-rails-asset'
-# gem 'angularjs-rails', '~> 1.2.2'
-# gem 'twitter-bootstrap-rails', '~> 3.2.0'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'

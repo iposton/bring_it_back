@@ -1,26 +1,23 @@
+<div class="masthead clearfix">
+  <div class="inner">
 
+    <% if logged_in? %>
+    <!-- show the name of user logged in -->
+      <h3 class="masthead-brand" id="bib">Welcome to BiB <%= @current_user.name %>!</h3>
+        <% else %>
+      <h3 class="masthead-brand" id="bib">Welcome to BiB!</h3>
+    <% end %>
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <% if logged_in? %>
-              <h3 class="masthead-brand" id="bib">Welcome to BiB <%= @current_user.name %>!</h3>
-              <% else %>
-              <h3 class="masthead-brand" id="bib">Welcome to BiB!</h3>
-              <% end %>
-              <nav ng-class="{true: 'body-pushed'}[main.pushmenu]">
-                <ul class="nav masthead-nav">
-                  
-                  <li><a href="#">Movie Reminder Service!</a></li>
-                    <li></li>
-                  
-                </ul>
-              
-              </nav>
-             
-              
-            </div>
-              
-        </div>
-        
-         <a class="glyphicon glyphicon-menu-hamburger" ng-click="main.pushmenu = !main.pushmenu"></a>
+     <nav ng-class="{true: 'body-pushed'}[main.pushmenu]">
+       <ul class="nav masthead-nav">
+         <li>
+          <a href="#">Movie Reminder Service!</a>
+         </li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+<!-- activate side nav bar by clicking icon in view -->
+<a class="glyphicon glyphicon-menu-hamburger" ng-click="main.pushmenu = !main.pushmenu"></a>
    

@@ -8,19 +8,24 @@
             <ol>
           		<li><!-- <div class="remove" ng-click="main.Movie.destroy(movie.id, $index)">
                 <span class="glyphicon glyphicon-remove"></span></div> -->
-                <p><a href="{{movie.link}}"><div id="movie-bubble" type="text" class="" data-container="body" data-toggle="popover" data-placement="left" data-content="{{movie.description}}">{{movie.title}}</div></a></p><div><input type="button" class="btn btn-default btn-small" value="Movie Details" data-toggle="modal" data-target="#myModal" data-title="{{movie.title}}" data-description="{{movie.description}}" data-actor="{{movie.actor1}}" data-two="{{movie.actor2}}" data-three="{{movie.actor3}}" data-released="{{movie.release_date}}" data-link="{{movie.link}}"></div>
-                 </li>
-                </ol>
-                    <div class="dropdown">
-                      <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-  expanded="false" class="btn btn-small btn-danger" value="Remind Me In...">
-                        Remind Me...<span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li>{{movie.reminders}}</option>
-                        <li>in 1month</li>
-                        <li>in 3months</li>
-                      </ul>
-                    </div>
+
+  <!-- this code controls the hover popover bubble effect shows movie description when hover on title -->
+                <p><a href="{{movie.link}}"><div id="movie-bubble" type="text" class="" data-container="body" data-toggle="popover" data-placement="left" data-content="{{movie.description}}">{{movie.title}}</div></a></p>
+  <!-- this code triggers modal when button clicked uses special jquery data id's to give each modal varying content -->
+                <div><input type="button" class="btn btn-default btn-small" value="Movie Details" data-toggle="modal" data-target="#myModal" data-title="{{movie.title}}" data-description="{{movie.description}}" data-actor="{{movie.actor1}}" data-two="{{movie.actor2}}" data-three="{{movie.actor3}}" data-released="{{movie.release_date}}" data-link="{{movie.link}}">
+                </div>
+              </li>
+            </ol>
+            <div class="dropdown">
+              <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-  expanded="false" class="btn btn-small btn-danger" value="Remind Me In...">
+                Remind Me...<span class="caret"></span>
+              </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>{{movie.reminders}}</option>
+                    <li>in 1month</li>
+                    <li>in 3months</li>
+                  </ul>
+            </div> <!-- dropdown menu end -->
             </div> 
         </div><!-- ng repeat end -->
          
@@ -31,14 +36,14 @@
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 
-                  <h4 class="modal-title" id="myModalLabel"></h4>
+                  <h4 class="modal-title" id="myModalLabel"><!-- special jquery code puts content stored in database here --></h4>
                 </div>
           <div class="modal-body-starring" >
-             
+             <!-- special jquery code puts content stored in database here -->
           </div>
 
           <div class="modal-body" id="movie-modal" >
-             
+             <!-- special jquery code puts content stored in database here -->
           </div>
           
           <div class="modal-footer">
@@ -62,13 +67,12 @@
     selector: '[data-toggle="popover"]', 
     trigger: 'hover',
     placement: 'right'
-
-
-    
+ 
 });
 
 $('#myModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
+  // variables for all the movie attributes
   var title = button.data('title') 
   var description = button.data('description')
   var starringOne = button.data('actor')
@@ -77,14 +81,16 @@ $('#myModal').on('show.bs.modal', function (event) {
   var released = button.data('released')
   var link = button.data('link')
   // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+ 
+  // Update the modal's content. We'll use jQuery here
+  // this puts content in modal
   var modal = $(this)
   modal.find('.modal-title').text(title)
   modal.find('.modal-body-starring').text(title + ' was released in ' + released + ' starring ' + starringOne + ', ' + starringTwo + ' and ' + starringThree + '.' )
   modal.find('.modal-body').text(description)
 })
 
+// code for dropdown menu animation
 $('.dropdown-toggle').dropdown()
    
 

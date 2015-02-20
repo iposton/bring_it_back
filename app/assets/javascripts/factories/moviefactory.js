@@ -20,9 +20,6 @@
             // Create a movie object
             self.movie = new MovieResource();
 
-
-
-
             self.create = function(movie){
 
                 MovieResource.save(movie, function(data, headers, status){    
@@ -62,9 +59,5 @@
         return Movies;
 
     }
-
-   
-
-   
 
 })();
