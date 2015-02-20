@@ -20,6 +20,9 @@
             // Create a movie object
             self.movie = new MovieResource();
 
+
+
+
             self.create = function(movie){
 
                 MovieResource.save(movie, function(data, headers, status){    
@@ -44,7 +47,7 @@
                 });
             };
 
-
+         
             // Delete a movie
             self.destroy = function(movie, index){
 
@@ -59,5 +62,9 @@
         return Movies;
 
     }
+
+   
+
+   
 
 })();

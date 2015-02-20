@@ -2,18 +2,25 @@
 <hr>
   <div class="container-fluid">
     <div class='row'>
-
-
       <div ng-repeat="movie in main.Movie.movies">
-        <div id="posts-box" class="sidebar-module col-sm-4">
+        <div id="posts-box" class="sidebar-module col-sm-3">
           <h4>{{movie.release_date}}</h4>
             <ol>
           		<li><!-- <div class="remove" ng-click="main.Movie.destroy(movie.id, $index)">
                 <span class="glyphicon glyphicon-remove"></span></div> -->
                 <p><a href="{{movie.link}}"><div id="movie-bubble" type="text" class="" data-container="body" data-toggle="popover" data-placement="left" data-content="{{movie.description}}">{{movie.title}}</div></a></p><div><input type="button" class="btn btn-default btn-small" value="Movie Details" data-toggle="modal" data-target="#myModal" data-title="{{movie.title}}" data-description="{{movie.description}}" data-actor="{{movie.actor1}}" data-two="{{movie.actor2}}" data-three="{{movie.actor3}}" data-released="{{movie.release_date}}" data-link="{{movie.link}}"></div>
-
-              </li>
-            </ol>
+                 </li>
+                </ol>
+                    <div class="dropdown">
+                      <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-  expanded="false" class="btn btn-small btn-danger" value="Remind Me In...">
+                        Remind Me...<span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li>{{movie.reminders}}</option>
+                        <li>in 1month</li>
+                        <li>in 3months</li>
+                      </ul>
+                    </div>
             </div> 
         </div><!-- ng repeat end -->
          
@@ -26,7 +33,7 @@
                 
                   <h4 class="modal-title" id="myModalLabel"></h4>
                 </div>
-          <div class="modal-body-starring" id="movie-modal" >
+          <div class="modal-body-starring" >
              
           </div>
 
@@ -36,22 +43,21 @@
           
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-info">Add to my Favorites</button>
+            <button type="button" class="btn btn-info">Add To My Reminder List</button>
           </div>
               </div>
           </div>
         </div> <!-- modal end -->
-        
-        
-      
+
+   
     </div>
   </div>
  
 
 
-<script type="text/javascript">
+<script>
   
-$(function () { $("[data-toggle='tooltip']").tooltip(); }); // enable bootstrap 3 tooltips
+    $(function () { $("[data-toggle='tooltip']").tooltip(); }); // enable bootstrap 3 tooltips
    $('body').popover({ 
     selector: '[data-toggle="popover"]', 
     trigger: 'hover',
@@ -79,8 +85,9 @@ $('#myModal').on('show.bs.modal', function (event) {
   modal.find('.modal-body').text(description)
 })
 
+$('.dropdown-toggle').dropdown()
+   
 
-  
 </script>
 
 
