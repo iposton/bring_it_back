@@ -168,7 +168,14 @@ h1 {
   padding: 30px;
 }
 
+/*
+ * dropdown menu
+ */
 
+ .dropdown-menu {
+
+  color: #2980b9;
+ }
 
 
 
@@ -209,11 +216,6 @@ font-size: 16px;
   font-size: 50px;
   color: #555;
 }
-
-
-
-
-
 
 /*
  * Header
@@ -290,11 +292,21 @@ a
  #movie-modal {
 
    color: #2980b9;
+   text-align: left;
+ }
+ .modal-body-starring {
+   color: #2980b9;
+  text-align: center;
  }
 
 /*
  * Form
  */
+
+ .border {
+  border: 2px solid white;
+  padding-bottom: 10px;
+ }
 
 .form-signin {
 
@@ -361,17 +373,17 @@ div#movie-bubble a:hover{
  * Movie index style
  */
 
-
 #posts-box  {
   
-  padding: 0;
+  padding: 0px;
   border: 3px solid #efefef;
   border-top: 0;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  
+  margin-right: 55px;
   margin-top: 30px;
+  padding-bottom: 5px;
   
 }
 

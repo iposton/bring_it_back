@@ -54,7 +54,43 @@ Movie.create!([
 	         actor2: "Michael Peña", 
 	         actor3: "Shia LaBeouf", 
 	         description: "April, 1945. As the Allies make their final push in the European Theatre, a battle-hardened army sergeant named Wardaddy (Brad Pitt) commands a Sherman tank and her five-man crew on a deadly mission behind enemy lines. Outnumbered and outgunned, and with a rookie soldier thrust into their platoon, Wardaddy and his men face overwhelming odds in their heroic attempts to strike at the heart of Nazi Germany.",
-	         reminders: "in 2 weeks"}
+	         reminders: "in 2 weeks"},
+
+	         {actor1: "Jim Carrey",
+			  actor2: "Jeff Daniels",
+			  actor3: "Rob Riggle",
+			  description: "Jim Carrey and Jeff Daniels reprise their signature roles as Lloyd and Harry in the sequel to the smash hit that took the physical comedy and kicked it in the nuts: Dumb and Dumber To. The original film's directors, Peter and Bobby Farrelly, take Lloyd and Harry on a road trip to find a child Harry never knew he had and the responsibility neither should ever, ever be given. The Farrelly brothers produce Dumb and Dumber To alongside Riza Aziz and Joey McFarland of Red Granite Pictures. They are joined by fellow producers Charles B. Wessler and Bradley Thomas. Universal Pictures will distribute the film in the United States, Canada and select international territories.",
+			  link: "http://www.rottentomatoes.com/m/dumb_and_dumber_to/",
+			  release_date: "2014",
+			  reminders: "In 3 weeks",
+			  title: "DUMB AND DUMBER TO"},
+
+			  {actor1: "Bradley Cooper",
+               actor2: "Sienna Miller",
+			   actor3: "Luke Grimes",
+			   description: "From director Clint Eastwood comes American Sniper, starring Bradley Cooper as Chris Kyle, the most lethal sniper in U.S. military history. But there was much more to this true American hero than his skill with a rifle. U.S. Navy SEAL sniper Chris Kyle is sent to Iraq with only one mission: to protect his brothers-in-arms. His pinpoint accuracy saves countless lives on the battlefield and, as stories of his courageous exploits spread, he earns the nickname Legend. However, his reputation is also growing behind enemy lines, putting a price on his head and making him a prime target of insurgents. Despite the danger, as well as the toll on his family at home, Chris serves through four harrowing tours of duty in Iraq, becoming emblematic of the SEAL creed to leave no man behind. But upon returning home, Chris finds that it is the war he can't leave behind.",
+			   link: "http://www.rottentomatoes.com/m/american_sniper/",
+			   release_date: "2014",
+			   reminders: "In 3 weeks",
+			   title: "AMERICAN SNIPER"},
+
+			   {actor1: "Benedict Cumberbatch",
+               actor2: "Keira Knightley",
+			   actor3: "Allen Leech",
+			   description: "During the winter of 1952, British authorities entered the home of mathematician, cryptanalyst and war hero Alan Turing (Benedict Cumberbatch) to investigate a reported burglary. They instead ended up arresting Turing himself on charges of 'gross indecency', an accusation that would lead to his devastating conviction for the criminal offense of homosexuality - little did officials know, they were actually incriminating the pioneer of modern-day computing. Famously leading a motley group of scholars, linguists, chess champions and intelligence officers, he was credited with cracking the so-called unbreakable codes of Germany's World War II Enigma machine. An intense and haunting portrayal of a brilliant, complicated man, THE IMITATION GAME follows a genius who under nail-biting pressure helped to shorten the war and, in turn, save thousands of lives.",
+			   link: "http://www.rottentomatoes.com/m/the_imitation_game/",
+			   release_date: "2014",
+			   reminders: "In 3 weeks",
+			   title: "THE IMITATION GAME"},
+
+			   {actor1: "Mila Kunis",
+               actor2: "Channing Tatum",
+			   actor3: "Eddie Redmayne",
+			   description: "From the streets of Chicago to the far-flung galaxies whirling through space, Jupiter Ascending tells the story of Jupiter Jones (Mila Kunis), who was born under a night sky, with signs predicting she was destined for great things. Now grown, Jupiter dreams of the stars but wakes up to the cold reality of a job cleaning other people's houses and an endless run of bad breaks. Only when Caine (Channing Tatum), a genetically engineered ex-military hunter, arrives on Earth to track her down does Jupiter begin to glimpse the fate that has been waiting for her all along-her genetic signature marks her as next in line for an extraordinary inheritance that could alter the balance of the cosmos.",
+			   link: "http://www.rottentomatoes.com/m/jupiter_ascending_2014/",
+			   release_date: "2014",
+			   reminders: "In 3 weeks",
+			   title: "JUPITER ASCENDING"}
 
 
 

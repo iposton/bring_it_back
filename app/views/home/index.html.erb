@@ -1,6 +1,7 @@
 <div ng-controller="cookieController as cookie">
     <% if logged_in? %>
 		<div ng-view ng-init="cookie.init('<%= current_user.id %>')">
+			<script>console.log('duplicated if jQuery');</script>
 		</div>			
 	<% end %>
 </div>	
