@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'mongoid', '~>4.0.0'
 gem 'rottentomatoes', '~> 1.1.0'
 gem 'httparty'
+# gem 'mongo_mapper', :git => "git://github.com/mongomapper/mongomapper.git", :tag => "v0.13.0.beta2"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -16,7 +17,7 @@ gem 'bower-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'autoprefixer-rails'
-#gem 'active_model_serializers'
+gem 'active_model_serializers'
 gem 'angular-rails-templates'
 gem 'angularjs-rails'
 gem 'bootstrap-sass', '~> 3.3.3'

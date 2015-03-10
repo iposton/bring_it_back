@@ -1,6 +1,5 @@
 // Controller before a person is logged in
 
-(function(){
 
 	angular
 		.module('app')
@@ -20,4 +19,3 @@
 
 	}
 
-})();

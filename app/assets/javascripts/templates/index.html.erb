@@ -36,6 +36,11 @@
                  <span class="input-group-addon">Remind Me</span>
                  <input id="movi" type="text" ng-model="main.Movie.movie.reminders" class="form-control" placeholder="In 3 weeks" autofocus>
            </div>
+
+          <!-- <select class="input-group form-signin text" ng-model="main.Movie.movie.user">
+            <option value="">All Users</option>
+            <option ng-repeat="movie in main.Movie.movies" value="{{movie.user}}">{{movie.user}}</option>
+          </select> -->
            <!-- error message when form doesn't submit -->
            <div ng-show="main.Movie.movieError === true" class="text-warning row text-center">Error!
            </div>

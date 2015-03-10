@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # This is our single page (app)  
    get '/home' => 'home#index' 
 
-   resources :users, only: [:new, :create]
+   resources :users, only: [:new, :create, :show]
    
 
   # Resource for sessions    
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     
      resources :movies
-     #resources :users
+     resources :users
      
   end
 

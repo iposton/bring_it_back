@@ -1,12 +1,6 @@
-(function(){
+angular.module('app').config(config).run(run);
 
-	//Routing for my spa app 
-	angular
-		.module('app')
-		.config(config)
-		.run(run);
-
-		function config($routeProvider, $locationProvider){
+		function config($routeProvider){
 
 			//define the routes 
 			$routeProvider
@@ -39,7 +33,7 @@
 				.when('/user-profile', {
 
 				title: 'User Profile',
-				templateUrl: 'user_profile.html',
+				templateUrl: 'users_show.html',
 				controller: 'MainController',
 				controllerAs: 'main'
 
@@ -54,12 +48,11 @@
 		function run($location, $rootScope){
 
 
-			var changeRoute = function(event, current, previous){
+			var changeRoute = function(event, current){
 				return $rootScope.title = current.$$route.title;
-			}
+			};
 
 			$rootScope.$on('$routeChangeSuccess', changeRoute);
 		}
 
 
-})();

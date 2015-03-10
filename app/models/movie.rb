@@ -10,6 +10,12 @@ class Movie
   field :reminders, type: String
   
   belongs_to :user
+  # has_one :user
+  # def favorite
+  #   object.user.name
+  # end 
+
+  # has_one :user, root: :favorite
   
   validates :link, presence: true, format: {with: /https?:\/\/[\S]+/}
   validates :title, presence: true, length: {maximum: 50}

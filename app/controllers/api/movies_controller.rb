@@ -14,6 +14,9 @@ module API
 
     def create 
       movie = Movie.new(movie_params)
+      user = User.find(params[:user_id])
+      movie.user = user
+
       if movie.save
         render json: movie, status: 201
       else
@@ -30,6 +33,10 @@ module API
       end
     end
 
+    def edit 
+      movie = Movie.find(params[:id])
+    end
+
     def destroy
       movie = Movie.find(params[:id])
       movie.destroy
@@ -39,7 +46,7 @@ module API
     private
     
       def movie_params
-        params.require(:movie).permit(:title, :link, :release_date, :actor1, :actor2, :actor3, :description, :reminders)
+        params.require(:movie).permit(:title, :link, :release_date, :actor1, :actor2, :actor3, :description, :reminders, :user)
       end
   end
 end

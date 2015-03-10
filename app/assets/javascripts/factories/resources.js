@@ -1,4 +1,4 @@
-(function(){
+
     angular
         .module('app')
         .factory('Resources', Resources);
@@ -44,4 +44,3 @@
     }
 
 
-}).call(this);

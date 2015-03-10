@@ -1,12 +1,8 @@
-(function(){
+angular.module('app').factory('MoviesFactory', MoviesFactory);
 
-    angular
-        .module('app')
-        .factory('MoviesFactory', MoviesFactory);
+    MoviesFactory.$inject = ['Resources'];
 
-    MoviesFactory.$inject = ['Resources', '$http'];
-
-    function MoviesFactory(Resources, $http){
+    function MoviesFactory(Resources){
 
         var Movies = function(){
             var self = this;
@@ -33,7 +29,8 @@
                     movie.actor2 = ''; 
                     movie.actor3 = '';  
                     movie.description = '';
-                    movie.reminders = '';         
+                    movie.reminders = ''; 
+                    movie.user = '';         
                     // Close the modal
                     //$('#movie-link').modal('toggle');
                 }).$promise.catch(function(response) {
@@ -60,4 +57,3 @@
 
     }
 
-})();
